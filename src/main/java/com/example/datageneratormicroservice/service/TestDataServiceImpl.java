@@ -2,7 +2,6 @@ package com.example.datageneratormicroservice.service;
 
 import com.example.datageneratormicroservice.model.Data;
 import com.example.datageneratormicroservice.model.test.DataTestOptions;
-import com.example.datageneratormicroservice.web.mapper.Mappable;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
