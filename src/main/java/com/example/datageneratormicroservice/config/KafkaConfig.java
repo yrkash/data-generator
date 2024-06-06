@@ -32,31 +32,31 @@ public class KafkaConfig {
                 .replicas(1)
                 .config(
                         TopicConfig.RETENTION_MS_CONFIG,
-                        String.valueOf(Duration.ofDays(7).toMillis())
+                        String.valueOf(Duration.ofSeconds(60).toMillis())
                 )
                 .build();
     }
 
     @Bean
     public NewTopic voltageTopic() {
-        return TopicBuilder.name("voltage-temperature")
+        return TopicBuilder.name("data-voltage")
                 .partitions(5)
                 .replicas(1)
                 .config(
                         TopicConfig.RETENTION_MS_CONFIG,
-                        String.valueOf(Duration.ofDays(7).toMillis())
+                        String.valueOf(Duration.ofSeconds(60).toMillis())
                 )
                 .build();
     }
 
     @Bean
     public NewTopic powerTopic() {
-        return TopicBuilder.name("power-temperature")
+        return TopicBuilder.name("data-power")
                 .partitions(5)
                 .replicas(1)
                 .config(
                         TopicConfig.RETENTION_MS_CONFIG,
-                        String.valueOf(Duration.ofDays(7).toMillis())
+                        String.valueOf(Duration.ofSeconds(60).toMillis())
                 )
                 .build();
     }
